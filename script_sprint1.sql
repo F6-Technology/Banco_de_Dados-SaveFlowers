@@ -6,8 +6,7 @@ create table empresa(
 	idEmpresa int primary key auto_increment,
     nomeEmpresa varchar(100) not null,
     cnpj varchar(18) not null,
-	loginEmpresa varchar(50),
-    senhaEmpresa varchar(50)
+	usuario varchar(50)
 );
 
 create table funcionario(
@@ -18,7 +17,6 @@ create table funcionario(
     dtNasc date not null,
     email varchar(100) not null,
     loginFuncionario varchar(50) not null,
-    senhaFuncionario varchar(50) not null,
 	fkEmpresa int, foreign key(fkEmpresa) references empresa(idEmpresa)
 );
 
