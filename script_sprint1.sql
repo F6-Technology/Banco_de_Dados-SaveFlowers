@@ -6,7 +6,8 @@ create table empresa(
 	idEmpresa int primary key auto_increment,
     nomeEmpresa varchar(100) not null,
     cnpj varchar(18) not null,
-	usuario varchar(50)
+	usuarioEmpresa varchar(50) not null,
+    senhaEmpresa varchar(50) not null
 );
 
 create table funcionario(
@@ -16,7 +17,8 @@ create table funcionario(
     cpf char(14) not null,    
     dtNasc date not null,
     email varchar(100) not null,
-    loginFuncionario varchar(50) not null,
+    usuarioFuncionario varchar(50) not null,
+    senhaEmpresa varchar(50) not null,
 	fkEmpresa int, foreign key(fkEmpresa) references empresa(idEmpresa)
 );
 
@@ -110,4 +112,6 @@ select * from sensor
 
 select * from sensor
 	where statusSensor = 'Inativo';    
+    
+
     
