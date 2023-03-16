@@ -1,7 +1,7 @@
 create database SaveFlowers;
 
 use SaveFlowers;
-
+  
 create table empresa(
 	idEmpresa int primary key auto_increment,
     nomeEmpresa varchar(100) not null,
@@ -24,7 +24,7 @@ create table funcionario(
 
 create table caminhao(
 	idCaminhao int primary key auto_increment,
-    placa char(8)
+    placa char(8) not null
 );
 
 create table sensor(
